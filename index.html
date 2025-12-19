@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — Guilherme Vieira Abreu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Guilherme<span>.Dev</span></a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets & TPs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="about" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="badge-hero">Étudiant BTS SIO</span>
+                <h1>Salut, je suis <br><span>Guilherme Vieira Abreu</span></h1>
+                <p>Développeur passionné par le <strong>Back-end</strong> et la <strong>Data</strong>. Je transforme des problèmes complexes en solutions codées.</p>
+                <div class="cta-group">
+                    <a href="#projects" class="btn btn-primary">Voir mes réalisations</a>
+                    <a href="https://github.com/glhevieira" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
+            </div>
+            <div class="hero-img">
+                <div class="avatar-circle">GV</div>
+                <div class="floating-icon sql"><i class="fa-solid fa-database"></i></div>
+                <div class="floating-icon code"><i class="fa-solid fa-code"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Mes Compétences</h2>
+            <p style="text-align:center; color:var(--secondary); margin-bottom:20px;">Cliquez sur une compétence pour filtrer les projets</p>
+            
+            <div class="skills-grid">
+                <div class="skill-card active" onclick="filterProjects('all')">
+                    <i class="fa-solid fa-layer-group icon"></i>
+                    <h3>Tout voir</h3>
+                </div>
+                <div class="skill-card" onclick="filterProjects('html')">
+                    <i class="fa-brands fa-html5 icon html"></i>
+                    <h3>HTML & CSS</h3>
+                </div>
+                <div class="skill-card" onclick="filterProjects('js')">
+                    <i class="fa-brands fa-js icon js"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-card" onclick="filterProjects('sql')">
+                    <i class="fa-solid fa-database icon sql"></i>
+                    <h3>SQL / Data</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title">Réalisations</h2>
+            
+            <div class="projects-grid">
+                
+                <article class="project-card" data-category="sql">
+                    <div class="card-header cinema"><i class="fa-solid fa-film"></i></div>
+                    <div class="card-body">
+                        <h4>Base de Données Cinéma</h4>
+                        <p>Architecture complexe : Films, Acteurs, Casting.</p>
+                        <div class="tags"><span>SQL</span><span>Merise</span></div>
+                        <a href="cinema_db_dump.sql" target="_blank" class="link-text">Voir Code SQL</a>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="sql">
+                    <div class="card-header bus"><i class="fa-solid fa-bus"></i></div>
+                    <div class="card-body">
+                        <h4>Réservation Touristique</h4>
+                        <p>Gestion complète : Clients, Circuits, Paiements.</p>
+                        <div class="tags"><span>MySQL</span><span>Gestion</span></div>
+                        <a href="base_reservation_car_touristique (1).sql" target="_blank" class="link-text">Voir BDD</a>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="sql">
+                    <div class="card-header sport"><i class="fa-solid fa-futbol"></i></div>
+                    <div class="card-body">
+                        <h4>Paris Sportifs</h4>
+                        <p>Calcul des gains, gestion matchs et cotes.</p>
+                        <div class="tags"><span>SQL</span><span>Logique</span></div>
+                        <a href="paris_sportif.sql" target="_blank" class="link-text">Voir Projet</a>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="sql">
+                    <div class="card-header stock"><i class="fa-solid fa-boxes-stacked"></i></div>
+                    <div class="card-body">
+                        <h4>Gestion de Stocks</h4>
+                        <p>Suivi entrées/sorties et inventaire.</p>
+                        <div class="tags"><span>SQL</span><span>Trigger</span></div>
+                        <a href="gestion_stock (1).sql" target="_blank" class="link-text">Voir Script</a>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="sql">
+                    <div class="card-header biblio"><i class="fa-solid fa-book"></i></div>
+                    <div class="card-body">
+                        <h4>Bibliothèque</h4>
+                        <p>Gestion emprunts et adhérents.</p>
+                        <div class="tags"><span>CRUD</span><span>SQL</span></div>
+                        <a href="bibliotheque.sql" target="_blank" class="link-text">Voir BDD</a>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="js">
+                    <div class="card-header js-header"><i class="fa-brands fa-js"></i></div>
+                    <div class="card-body">
+                        <h4>TP 9 à 14 : Logique JS</h4>
+                        <p>Série d'exercices sur la manipulation du DOM, les événements et les boucles.</p>
+                        <div class="tags"><span>JavaScript</span><span>DOM</span></div>
+                        <div class="links-grid">
+                            <a href="tp9/index.html" target="_blank">TP9</a>
+                            <a href="tp10/index.html" target="_blank">TP10</a>
+                            <a href="tp11/index.html" target="_blank">TP11</a>
+                            <a href="Tp12/index.html" target="_blank">TP12</a>
+                            <a href="tp13/index.html" target="_blank">TP13</a>
+                            <a href="tp14/index.html" target="_blank">TP14</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="js">
+                    <div class="card-header js-header"><i class="fa-solid fa-list-check"></i></div>
+                    <div class="card-body">
+                        <h4>Mission 9 : QCM Interactif</h4>
+                        <p>Application de QCM dynamique avec calcul de score en temps réel.</p>
+                        <div class="tags"><span>JS</span><span>App</span></div>
+                        <a href="mission9/index.html" target="_blank" class="link-text">Lancer le QCM</a>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="html">
+                    <div class="card-header web"><i class="fa-brands fa-html5"></i></div>
+                    <div class="card-body">
+                        <h4>TP 1 à 8 : Intégration Web</h4>
+                        <p>Apprentissage de la structure HTML et du style CSS. Mise en page et responsive.</p>
+                        <div class="tags"><span>HTML</span><span>CSS</span></div>
+                        <div class="links-grid">
+
+                            <a href="https://glhevieira.github.io/prt/TP4.html" target="_blank">TP4</a>
+                            <a href="tp5/style.css" target="_blank">TP5</a>
+                            <a href="tp7.1/index.html" target="_blank">TP7</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="html">
+                    <div class="card-header web"><i class="fa-solid fa-laptop-code"></i></div>
+                    <div class="card-body">
+                        <h4>Missions Web</h4>
+                        <p>Création de sites complets : CV, Dossiers thématiques et site vitrine.</p>
+                        <div class="tags"><span>HTML</span><span>CSS</span><span>Design</span></div>
+                        <div class="links-grid">
+                            <a href="mission2/index.html" target="_blank">CV</a>
+                            <a href="mission 3/index.html" target="_blank">Site Web</a>
+                            <a href="Mission 4.pdf" target="_blank">Dossier</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function filterProjects(category) {
+            // 1. Gérer l'apparence des boutons (active state)
+            const buttons = document.querySelectorAll('.skill-card');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            // On ajoute 'active' au bouton cliqué (via event.currentTarget ou en retrouvant celui qui a le bon onclick)
+            // Une façon simple ici :
+            event.currentTarget.classList.add('active');
+
+            // 2. Filtrer les projets
+            const projects = document.querySelectorAll('.project-card');
+            
+            projects.forEach(card => {
+                // Si on demande "all" ou si la catégorie correspond
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex'; // Afficher
+                    // Petite animation d'apparition
+                    card.style.opacity = '0';
+                    setTimeout(() => card.style.opacity = '1', 50);
+                } else {
+                    card.style.display = 'none'; // Masquer
+                }
+            });
+
+            // 3. Scroll automatique vers la section projets pour voir le résultat
+            document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Menu Mobile Toggle
+        const menuBtn = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
