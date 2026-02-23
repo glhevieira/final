@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guilherme Vieira — Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <nav>
-            <div class="logo">GV</div>
-            <ul>
-                <li><a href="#apropos">À propos</a></li>
+        <nav class="navbar">
+            <div class="logo">GV<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="#apropos">Profil</a></li>
                 <li><a href="#competences">Compétences</a></li>
-                <li><a href="#projets">Projets</a></li>
-                <li><a href="#experience">Expérience</a></li>
-                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#projets">Travaux (TP)</a></li>
+                <li><a href="#missions">Missions</a></li>
+                <li><a href="#certifications">Certificats</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -24,80 +25,107 @@
 
     <main>
         <section id="apropos" class="hero">
-            <div class="hero-content">
-                <h1>Vieira Abreu Guilherme</h1>
-                <p>Étudiant en Informatique — Je crée des interfaces web et des applications côté serveur avec une appétence pour les bases de données et la logique métier. Objectif : obtenir le BTS SIO et consolider des expériences réelles via des projets et contributions open‑source.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn primary">Me contacter</a>
-                    <a href="https://github.com/glhevieira" target="_blank" class="btn secondary">Voir mon GitHub</a>
+            <div class="hero-container">
+                <div class="hero-text">
+                    <span class="badge">Étudiant BTS SIO</span>
+                    <h1>Vieira Abreu <span>Guilherme</span></h1>
+                    <p>Passionné par le développement web et les bases de données. Je conçois des solutions modernes et efficaces.</p>
+                    <div class="hero-actions">
+                        <a href="#projets" class="btn-main">Découvrir mes projets</a>
+                        <a href="https://github.com/glhevieira" target="_blank" class="btn-sub"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="competences">
-            <h2>Compétences</h2>
-            <div class="skills-grid">
-                <span class="skill-tag">HTML</span>
-                <span class="skill-tag">CSS</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">PHP</span>
-                <span class="skill-tag">SQL</span>
+        <section id="competences" class="section">
+            <h2 class="section-title">Expertise</h2>
+            <div class="skills-wrapper">
+                <div class="skill-card"><i class="fab fa-html5"></i> <span>HTML5</span></div>
+                <div class="skill-card"><i class="fab fa-css3-alt"></i> <span>CSS3</span></div>
+                <div class="skill-card"><i class="fab fa-js"></i> <span>JavaScript</span></div>
+                <div class="skill-card"><i class="fab fa-php"></i> <span>PHP</span></div>
+                <div class="skill-card"><i class="fas fa-database"></i> <span>SQL</span></div>
             </div>
         </section>
 
-        <section id="projets">
-            <h2>Projets (TP)</h2>
-            <div class="projects-grid">
-                <a href="TP1/index.html" class="project-card"><h4>TP1</h4><p>HTML / CSS</p></a>
-                <a href="TP2/index.html" class="project-card"><h4>TP2</h4><p>HTML / CSS</p></a>
-                <a href="tp/TP3.html" class="project-card"><h4>TP3</h4><p>HTML / CSS</p></a>
-                <a href="https://glhevieira.github.io/prt/TP4.html" class="project-card"><h4>TP4</h4><p>HTML / CSS</p></a>
-                <a href="tp/TP5.html" class="project-card"><h4>TP5</h4><p>HTML / CSS</p></a>
-                <a href="https://glhevieira.github.io/prt/TP6.html" class="project-card"><h4>TP6</h4><p>HTML / CSS</p></a>
-                <a href="tp7.1/index.html" class="project-card"><h4>TP7</h4><p>HTML / CSS</p></a>
-                <a href="tp/TP8.html" class="project-card"><h4>TP8</h4><p>HTML / CSS</p></a>
-                <a href="tp/TP9.html" class="project-card"><h4>TP9</h4><p>JavaScript</p></a>
-                <a href="tp/TP10.html" class="project-card"><h4>TP10</h4><p>JavaScript</p></a>
-                <a href="tp/TP11.html" class="project-card"><h4>TP11</h4><p>JavaScript</p></a>
-                <a href="tp/TP12.html" class="project-card"><h4>TP12</h4><p>JavaScript</p></a>
-                <a href="tp/TP13.html" class="project-card"><h4>TP13</h4><p>JavaScript</p></a>
-                <a href="tp/TP14.html" class="project-card"><h4>TP14</h4><p>JavaScript</p></a>
-                <a href="tp/TP16.html" class="project-card"><h4>TP16</h4><p>SQL</p></a>
-            </div>
-
-            <h3>Missions</h3>
-            <div class="projects-grid">
-                <a href="tp/mission2.html" class="project-card"><h4>Mission 2</h4><p>CV Professionnel</p></a>
-                <a href="tp/mission3.html" class="project-card"><h4>Mission 3</h4><p>Projet Web</p></a>
-                <a href="tp/mission4.html" class="project-card"><h4>Mission 4</h4><p>Dossier Thématique</p></a>
-                <a href="https://glhevieira.github.io/prt/mission5.html" class="project-card"><h4>Mission 5</h4><p>Projet Avancé</p></a>
-                <a href="tp/mission6.html" class="project-card"><h4>Mission 6</h4><p>Mini-Application</p></a>
-            </div>
-        </section>
-
-        <section id="certifications">
-            <h2>Certifications</h2>
-            <div class="projects-grid">
-                <a href="tp/certif/Capture%20d’écran%202025-11-05%20203558.png" target="_blank" class="project-card"><h4>Certif</h4><p>ANSSI</p></a>
-                <a href="tp/certif/modulk1.png" target="_blank" class="project-card"><h4>Certif</h4><p>MOOC CNIL RGPD MODULE 1</p></a>
-                <a href="tp/certif/2.png" target="_blank" class="project-card"><h4>Certif</h4><p>MOOC CNIL RGPD MODULE 2</p></a>
-                <a href="tp/certif/3.png" target="_blank" class="project-card"><h4>Certif</h4><p>MOOC CNIL RGPD MODULE 3</p></a>
-                <a href="tp/certif/4.png" target="_blank" class="project-card"><h4>Certif</h4><p>MOOC CNIL RGPD MODULE 4</p></a>
-                <a href="tp/certif/5.png" target="_blank" class="project-card"><h4>Certif</h4><p>MOOC CNIL RGPD MODULE 5</p></a>
-                <a href="tp/certif/6.png" target="_blank" class="project-card"><h4>Certif</h4><p>MOOC CNIL RGPD MODULE 6</p></a>
-                <a href="tp/mooc%20cnil%20rgpd/mooccnil.html" class="project-card"><h4>Certif</h4><p>MOOC CNIL RGPD MODULE recap</p></a>
+        <section id="projets" class="section">
+            <h2 class="section-title">Travaux Pratiques</h2>
+            <div class="grid-container">
+                <a href="TP1/index.html" class="card">
+                    <div class="card-content">
+                        <h3>TP1</h3>
+                        <p>Structure & Design HTML/CSS</p>
+                    </div>
+                </a>
+                <a href="TP2/index.html" class="card">
+                    <div class="card-content">
+                        <h3>TP2</h3>
+                        <p>Mise en page avancée</p>
+                    </div>
+                </a>
+                <a href="tp/TP3.html" class="card">
+                    <div class="card-content">
+                        <h3>TP3</h3>
+                        <p>Formulaires & Tableaux</p>
+                    </div>
+                </a>
+                <a href="tp/TP14.html" class="card">
+                    <div class="card-content">
+                        <h3>TP14</h3>
+                        <p>Logique JavaScript</p>
+                    </div>
+                </a>
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Mail : <a href="mailto:glhevieira@gmail.com">glhevieira@gmail.com</a></p>
-            <p>GitHub : <a href="https://github.com/glhevieira" target="_blank">github.com/glhevieira</a></p>
+        <section id="missions" class="section">
+            <h2 class="section-title">Missions Professionnelles</h2>
+            <div class="grid-container">
+                <a href="tp/mission2.html" class="card mission-card">
+                    <div class="card-content">
+                        <h3>Mission 2</h3>
+                        <p>Réalisation d'un CV Professionnel</p>
+                    </div>
+                </a>
+                <a href="tp/mission3.html" class="card mission-card">
+                    <div class="card-content">
+                        <h3>Mission 3</h3>
+                        <p>Développement de Projet Web</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="certifications" class="section">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certif-list">
+                <a href="tp/certif/Capture%20d’écran%202025-11-05%20203558.png" target="_blank" class="certif-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <h4>ANSSI</h4>
+                        <p>Cyber-sécurité & Bonnes pratiques</p>
+                    </div>
+                </a>
+                <a href="tp/certif/modulk1.png" target="_blank" class="certif-item">
+                    <i class="fas fa-user-lock"></i>
+                    <div>
+                        <h4>RGPD - Module 1</h4>
+                        <p>Sensibilisation à la protection des données</p>
+                    </div>
+                </a>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; Guilherme Vieira — Portfolio</p>
+    <footer id="contact">
+        <div class="footer-content">
+            <h3>On travaille ensemble ?</h3>
+            <p><i class="fas fa-envelope"></i> glhevieira@gmail.com</p>
+            <div class="social-icons">
+                <a href="https://github.com/glhevieira"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
     </footer>
 
 </body>
