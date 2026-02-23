@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guilherme Vieira — Portfolio</title>
+    <title>Documentation BDD — Veto Projet</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Ajustements spécifiques pour un rendu "Pro" */
+        :root { --accent: #00d2ff; --bg-card: #161b22; }
+        .sql-header { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background: #21262d; border-radius: 8px 8px 0 0; border-bottom: 1px solid #30363d; }
+        .code-window { border-radius: 8px; border: 1px solid #30363d; overflow: hidden; margin-top: 20px; }
+        .img-container { position: relative; cursor: zoom-in; transition: transform 0.3s ease; }
+        .img-container:hover { transform: scale(1.02); }
+        .tech-tag { background: rgba(0, 210, 255, 0.1); color: var(--accent); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; border: 1px solid var(--accent); }
+    </style>
 </head>
 <body>
 
@@ -13,99 +22,94 @@
         <nav class="navbar">
             <div class="logo">GV<span>.</span></div>
             <ul class="nav-links">
-                <li><a href="#apropos">Profil</a></li>
-                <li><a href="#competences">Expertise</a></li>
-                <li><a href="#projets">TP</a></li>
-                <li><a href="#missions">Missions</a></li>
-                <li><a href="#certifications">Certificats</a></li>
+                <li><a href="index.html"><i class="fas fa-arrow-left"></i> Portfolio</a></li>
+                <li><a href="#conception">Modélisation</a></li>
+                <li><a href="#script">Développement SQL</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="apropos" class="hero">
+        <section class="hero" style="padding: 100px 20px 60px;">
             <div class="hero-container">
-                <span class="badge">Étudiant BTS SIO</span>
-                <h1>Vieira Abreu <span>Guilherme</span></h1>
-                <p>Développement d'applications et gestion de bases de données. Je conçois des interfaces modernes et des solutions optimisées.</p>
-                <div class="hero-actions">
-                    <a href="#projets" class="btn-main">Découvrir mes projets</a>
-                    <a href="https://github.com/glhevieira" target="_blank" class="btn-sub"><i class="fab fa-github"></i> GitHub</a>
+                <span class="tech-tag">SQL / MySQL / MariaDB</span>
+                <h1 style="margin: 15px 0;">Système de Gestion <span>Vétérinaire</span></h1>
+                <p>Conception d'une infrastructure de données robuste pour le suivi clinique et biologique d'un parc animalier.</p>
+                <div class="hero-actions" style="margin-top: 30px;">
+                    <a href="script_veto_sql (1).sql" download class="btn-main">
+                        <i class="fas fa-file-code"></i> Source SQL
+                    </a>
+                    <a href="#conception" class="btn-sub">Étude Technique</a>
                 </div>
             </div>
         </section>
 
-        <section id="competences" class="section">
-            <h2 class="section-title">Expertise Technique</h2>
-            <div class="skills-wrapper">
-                <div class="skill-card"><i class="fab fa-html5"></i><span>HTML5</span></div>
-                <div class="skill-card"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
-                <div class="skill-card"><i class="fab fa-js"></i><span>JavaScript</span></div>
-                <div class="skill-card"><i class="fab fa-php"></i><span>PHP</span></div>
-                <div class="skill-card"><i class="fas fa-database"></i><span>SQL</span></div>
+        <section id="conception" class="section">
+            <h2 class="section-title">Analyse Structurelle</h2>
+            <div class="grid-container" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                
+                <div class="card">
+                    <div class="card-content">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                            <h3>Modèle Conceptuel (MCD)</h3>
+                            <i class="fas fa-project-diagram" style="color: var(--accent);"></i>
+                        </div>
+                        <div class="img-container">
+                            <img src="mcd (1).png" alt="MCD" style="width: 100%; border-radius: 4px;">
+                        </div>
+                        <p style="margin-top: 15px; font-size: 0.9rem; color: #8b949e;">Identification des entités métiers et des cardinalités de gestion.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                            <h3>Modèle Logique (MLD)</h3>
+                            <i class="fas fa-table" style="color: var(--accent);"></i>
+                        </div>
+                        <div class="img-container">
+                            <img src="mld (1).png" alt="MLD" style="width: 100%; border-radius: 4px;">
+                        </div>
+                        <p style="margin-top: 15px; font-size: 0.9rem; color: #8b949e;">Schéma relationnel optimisé incluant l'intégrité référentielle.</p>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <section id="projets" class="section">
-            <h2 class="section-title">Travaux Pratiques</h2>
-            <div class="grid-container">
-               
-                
-                <a href="TP3" class="card"><h3>TP3</h3><p>Formulaires</p></a>
-                <a href="https://glhevieira.github.io/prt/TP4.html" class="card"><h3>TP4</h3><p>Lien externe</p></a>
-                <a href="tp5" class="card"><h3>TP5</h3><p>Design Web</p></a>
-                <a href="https://glhevieira.github.io/prt/TP6.html" class="card"><h3>TP6</h3><p>Lien externe</p></a>
-                
-                <a href="tp7.1/index.html" class="card"><h3>TP7</h3><p>Organisation</p></a>
-                
-                <a href="tp8" class="card"><h3>TP8</h3><p>Styles Avancés</p></a>
-                <a href="tp9" class="card"><h3>TP9</h3><p>JavaScript</p></a>
-                <a href="tp10" class="card"><h3>TP10</h3><p>JS Interactif</p></a>
-                <a href="tp11" class="card"><h3>TP11</h3><p>Fonctions JS</p></a>
-                <a href="Tp12" class="card"><h3>TP12</h3><p>DOM JS</p></a>
-                <a href="tp13" class="card"><h3>TP13</h3><p>Événements JS</p></a>
-                <a href="tp14" class="card"><h3>TP14</h3><p>Logique JS</p></a>
-                <a href="tp16" class="card"><h3>TP16</h3><p>Bases SQL</p></a>
-                <a href="tp conception" class="card"><h3>TP conception</h3><p>conception</p></a>
-            </div>
-        </section>
+        <section id="script" class="section">
+            <h2 class="section-title">Implémentation SQL</h2>
+            <div class="code-window">
+                <div class="sql-header">
+                    <div style="display: flex; gap: 8px;">
+                        <span style="width:12px; height:12px; background:#ff5f56; border-radius:50%"></span>
+                        <span style="width:12px; height:12px; background:#ffbd2e; border-radius:50%"></span>
+                        <span style="width:12px; height:12px; background:#27c93f; border-radius:50%"></span>
+                    </div>
+                    <span style="font-size: 0.8rem; color: #8b949e; font-family: monospace;">database_setup.sql</span>
+                </div>
+                <pre style="margin: 0; background: #0d1117; padding: 30px; color: #d1d5db; font-size: 14px; line-height: 1.6; overflow-x: auto;">
+<span style="color: #8b949e;">-- Table de définition des soins appliqués</span>
+<span style="color: #ff7b72;">CREATE TABLE</span> <span style="color: #d2a8ff;">Soins</span> (
+  code_soin <span style="color: #79c0ff;">INT</span> <span style="color: #ff7b72;">NOT NULL</span>,
+  type_soin <span style="color: #79c0ff;">VARCHAR</span>(50) <span style="color: #ff7b72;">NOT NULL</span>,
+  <span style="color: #ff7b72;">CONSTRAINT</span> Soins_PK <span style="color: #ff7b72;">PRIMARY KEY</span> (code_soin)
+) <span style="color: #79c0ff;">ENGINE</span>=InnoDB;
 
-        <section id="missions" class="section">
-            <h2 class="section-title">Missions de Stage</h2>
-            <div class="grid-container">
-                <a href="mission2" class="card"><h3>Mission 2</h3><p>CV Professionnel</p></a>
-                <a href="mission 3" class="card"><h3>Mission 3</h3><p>Projet Web</p></a>
-                <a href="mission4" class="card"><h3>Mission 4</h3><p>Dossier Thématique</p></a>
-                <a href="https://glhevieira.github.io/prt/mission5.html" class="card"><h3>Mission 5</h3><p>Lien externe</p></a>
-                <a href="m6" class="card"><h3>Mission 6</h3><p>Application</p></a>
-                <a href="mission9" class="card"><h3>Mission 9</h3><p>Application</p></a>
-                <a href="m11" class="card"><h3>Mission 11</h3><p>Application</p></a>
-            </div>
-        </section>
-
-        <section id="certifications" class="section">
-            <h2 class="section-title">Certifications</h2>
-            <div class="certif-list">
-                <a href="tp/certif/Capture%20d’écran%202025-11-05%20203558.png" target="_blank" class="certif-item">
-                    <i class="fas fa-certificate"></i>
-                    <div><h4>ANSSI</h4><p>Sécurité Numérique</p></div>
-                </a>
-                <a href="tp/mooc%20cnil%20rgpd/mooccnil.html" class="certif-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <div><h4>CNIL RGPD</h4><p>Protection des données</p></div>
-                </a>
+<span style="color: #8b949e;">-- Hiérarchie taxonomique des espèces</span>
+<span style="color: #ff7b72;">CREATE TABLE</span> <span style="color: #d2a8ff;">Familles</span> (
+  code_famille <span style="color: #79c0ff;">INT</span> <span style="color: #ff7b72;">NOT NULL</span>,
+  nom_famille <span style="color: #79c0ff;">VARCHAR</span>(50) <span style="color: #ff7b72;">NOT NULL</span>,
+  code_ordre <span style="color: #79c0ff;">INT</span> <span style="color: #ff7b72;">NOT NULL</span>,
+  <span style="color: #ff7b72;">CONSTRAINT</span> Familles_PK <span style="color: #ff7b72;">PRIMARY KEY</span> (code_famille),
+  <span style="color: #ff7b72;">CONSTRAINT</span> FK_ordre <span style="color: #ff7b72;">FOREIGN KEY</span> (code_ordre) <span style="color: #ff7b72;">REFERENCES</span> Ordre(code_ordre)
+) <span style="color: #79c0ff;">ENGINE</span>=InnoDB;</pre>
             </div>
         </section>
     </main>
 
-    <footer id="contact">
-        <div class="footer-content">
-            <p>Guilherme Vieira — 2026</p>
-            <div class="social-icons">
-                <a href="mailto:glhevieira@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://github.com/glhevieira" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
-        </div>
+    <footer style="margin-top: 80px; padding-bottom: 40px; text-align: center; color: #8b949e; font-size: 0.9rem;">
+        <p>© 2026 Guilherme Vieira — BTS SIO SLAM</p>
     </footer>
 
 </body>
